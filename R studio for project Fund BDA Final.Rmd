@@ -1,0 +1,75 @@
+---
+title: "Fund BDA Final project"
+output: html_notebook
+---
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(ggimage)
+
+bda<- data.frame(Project_Fund_BDA_original_with_leagues)
+
+ggplot(bda) +
+  geom_point(mapping = aes(y = AvgRk, x = Expenditure, color = Squad)) +
+  geom_smooth(mapping = aes(y = AvgRk, x= Expenditure), se = FALSE) +
+  labs(title = "How Transfer Market effected Team Rk '21-12'") + xlab("Total funds spent '$m'")
+```
+
+```{r}
+#Linear Regression #1
+
+#plot(bda$Expenditure, bda$AvgRk)
+
+bda.regression <- lm(AvgRk ~ Expenditure, data = bda)
+summary(bda.regression)
+
+#y =AvgRk, x = Expenditure
+
+plot(bda$Expenditure, bda$AvgRk) +
+abline(bda.regression, col="blue")
+
+
+#plot(x, Y)
+
+# According to the p-value, Expenditure has a keen relationship with AvgRk(rank)
+```
+
+
+
+
+```{r}
+
+bda2<- data.frame(Fund_BDA_decade_2_project)
+
+ggplot(bda2) +
+  geom_point(mapping = aes(y= AvgRk , x = Expenditure, color = Squad)) +
+  geom_smooth(mapping = aes(y = AvgRk, x = Expenditure), se = FALSE) +
+  labs(title = "How Transfer Market effected Team Rk '11-02'") + xlab("Total funds spent '$m'")
+
+
+```
+
+
+```{r}
+#Linear Regression 2: 
+ 
+bda2.regression <- lm(AvgRk ~ Expenditure, data = bda2)
+summary(bda2.regression)
+
+#y =AvgRk, x = Expenditure
+
+
+plot(bda2$Expenditure, bda2$AvgRk) +
+abline(bda2.regression, col="blue")
+
+#Plot(x,y)
+
+# According to the p-value, Expenditure has a keen relationship with AvgRk(rank)
+
+ 
+
+```
+
+
+
+
