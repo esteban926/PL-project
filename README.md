@@ -7,9 +7,9 @@ Q. Does higher player spending in the transfer market, lead to better team ranki
 The goal of this project was to find an answer as to whether money spent in the transfer market for premier league players, has resulted in a team increasing their league ranking.
 
 ### Data:
-The data used to analyze and solve this problem was taken from 2 online sites; https://fbref.com/en/comps/9/Premier-League-Stats, transfermarkt.us/premier-league/einnahmenausgaben/wettbewerb/GB1;  and put in an excel
-The data totaled to 20 years (2021-2002) of information showing the rank of a team and how much they spent in the transfer market per year. 
-The dataset was divided into 2 decades: Decade 1- (2021-2012), Decade2- (2011-2002)
+- The data used to analyze and solve this problem was taken from 2 online sites; https://fbref.com/en/comps/9/Premier-League-Stats, transfermarkt.us/premier-league/einnahmenausgaben/wettbewerb/GB1;  and put in an excel
+- The data totaled to 20 years (2021-2002) of information showing the rank of a team and how much they spent in the transfer market per year. 
+- The dataset was divided into 2 decades: Decade 1- (2021-2012), Decade2- (2011-2002)
 
 ### How to run
 In order to run the Rscript you first need to:
